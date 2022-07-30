@@ -62,14 +62,13 @@ See `CatalogFS_Lister` project for details.
    $ fusermount -u "/home/user/my_music_collection"
    ```
 
-   During this copy process the actual data IS NOT stored in the index, only metadata is.
+   During this copy process the actual data **IS NOT** stored in the index, only metadata is.
 
    Saving files to `CatalogFS` is almost instant but reading files from the source is slower. Any copying tool will spend time to actually read the entire source file.
 
-
 #### To view previously created index (snapshot) of your data.
 
-You can view the index (snapshot) as it is, with any file manager it's already a lot. But if you want to view it with original file-sizes, stats and/or modification times you should mount the index with CatalogFS filesystem as described below.
+You can view the index (snapshot) as it is, with any file manager it's already a lot. But if you want to view it with original file-sizes, stats and/or modification times you should mount the index with `CatalogFS` filesystem as described below.
 
 1. Mount the index (snapshot) to any directory.
 
@@ -115,9 +114,7 @@ You can view the index (snapshot) as it is, with any file manager it's already a
    ```
 
 
-
-
-### Command-line usage:
+## Command-line usage:
 ```
 catalogfs --source=source_dir_path mountpoint_path
 ```
@@ -131,7 +128,6 @@ where:
 If `--source` argument is not provided the `mountpoint_path` is used as a source directory (it's a mode of mounting over the existing index to hide it with browsable fake files).
 
 For other command line arguments run the application with `-h/--help` argument.
-
 
 
 ## Some technical details
