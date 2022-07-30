@@ -1,0 +1,31 @@
+{
+  "C_Cpp.dimInactiveRegions": true,
+  "cSpell.words": [
+	"Wextra",
+	"catalogfs",
+	"cdrom",
+	"ctim",
+	"fusermount",
+	"narg",
+	"st",
+	"utimens",
+	"utimensat"
+],
+  // Controls the rendering size of tabs in characters. If set to auto, the value will be guessed based on the opened file.
+  "editor.tabSize": 4,
+
+  // Controls if the editor will insert spaces for tabs. If set to auto, the value will be guessed based on the opened file.
+  "editor.insertSpaces": false,
+
+  "c-cpp-flylint.clang.extraArgs": ["-Wno-unused-macros"],
+  "files.associations": {
+	"header_common.h": "c",
+	"typeinfo": "c",
+	"errno.h": "c",
+	"filestat_helper.h": "c",
+	"errno-base.h": "c",
+	"filestat_parser.h": "c",
+	"filestat.h": "c",
+	"unistd.h": "c"
+}
+}

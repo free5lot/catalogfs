@@ -1,0 +1,4 @@
+tests/*
+bin/*
+other/*
+.VSCodeCounter/*

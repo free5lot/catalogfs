@@ -1,0 +1,85 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "windows": {
+        "command": "powershell"
+      },
+      "linux": {
+        "command": "bash"
+      },
+      "osx": {
+        "command": "bash"
+      },
+      "args": ["-c", "make --always-make"],
+      "problemMatcher": ["$gcc"],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "build & run",
+      "type": "shell",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "windows": {
+        "command": "powershell"
+      },
+      "linux": {
+        "command": "bash"
+      },
+      "osx": {
+        "command": "bash"
+      },
+      "args": ["-c", "'make run'"]
+    },
+    {
+      "label": "clean",
+      "type": "shell",
+      "windows": {
+        "command": "powershell"
+      },
+      "linux": {
+        "command": "bash"
+      },
+      "osx": {
+        "command": "bash"
+      },
+      "args": ["-c", "'make clean'"]
+    },
+    {
+      "label": "BindedTask",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "new",
+        "showReuseMessage": false,
+        "clear": true
+      },
+      "detail": "Unmount by shortcut",
+      "type": "shell",
+      "linux": {
+        "command": "fusermount"
+      },
+      "osx": {
+        "command": "fusermount"
+      },
+      "args": ["-u", "${workspaceFolder}/../test/mountpoint"],
+      "problemMatcher": []
+    }
+  ]
+}
